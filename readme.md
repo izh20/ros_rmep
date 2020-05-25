@@ -23,7 +23,7 @@
    $ cd catkin_ws
    $ mkdir src
    $ cd src
-   $ git clone 
+   $ git clone https://github.com/izh20/ros_rmep
    $ cd ../
    $ catkin_make
    ```
