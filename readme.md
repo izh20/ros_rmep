@@ -60,4 +60,20 @@ $ rosrun roborts_tracking roborts_tracking_test
 运行完以上命令后，面部对准rmep的相机，按下键盘的`g`，云台便会自动跟踪人脸，如果跟踪丢失,可以按下`s`,云台便会停止跟踪,再重新按下`g`进行跟踪
 
 
-
+## gmapping
+打开一个终端，获取ep的底盘数据，发布里程计数据并启动激光雷达，ｇmapping，tf_static
+```bash
+$ cd ~/catkin_ws
+$ source devel/setup.bash
+$ roslaunch rm_ep start_demo.launch
+```
+再打开一个终端,启动ep，将ep的数据通过topic发到ros中
+```bash
+$ cd ~/catkin_ws/src/rm_ep/scripts/
+$ python3 rmep_bash.py
+```
+再打开一个终端，启动键盘控制,`i`前进，`,`后退,`j`左旋转，`l`右旋转
+```bash
+$ cd ~/catkin_ws/src/rm_ep/scripts/
+$ python3 racecar_teleop.py
+```
