@@ -9,3 +9,7 @@ ImportError: dynamic module does not define module export function (PyInit_cv_br
 
 ## 完成人脸识别　　下一步将人脸识别和追踪算法结合　
 ｀ 5.13日
+## 需要注意的是，即使使用的virtualenv中，python指向的是python3，但是只要不在.py文件中添加python3的shebang，rosrun还是会调用python2的。这样可以很方便地兼容原来Python2的Package。
+尝试在python2 中使用tf,python3中
+
+## rosdep update (解决方案)[https://blog.csdn.net/u013468614/article/details/102917569]

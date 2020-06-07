@@ -1,0 +1,16 @@
+<launch>
+  <master auto="start"/>
+  
+  <node name="odom" pkg="rm_ep" type="rm_ep_odom_test"/>
+
+  <include file="$(find rplidar_ros)/launch/rplidar_a3.launch" />
+    
+  <!-- Run the slam gmapping -->
+  <include file="$(find rm_ep)/launch/slam_gmapping.xml"/>
+
+    <!-- Publish static tf -->
+  <include file="$(find rm_ep)/launch/static_tf.launch" />
+
+
+
+  </launch>
